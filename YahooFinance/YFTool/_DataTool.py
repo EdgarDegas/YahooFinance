@@ -89,7 +89,7 @@ def _value_of_key(soup, key):
     Returns value coresponding to key from HTML table.
     """
 
-    return soup.find_all(string=key)[0].parent.parent.next_sibling.string
+    return soup.find(string=key)[0].parent.parent.next_sibling.string
 
 
 def main():

@@ -4,8 +4,12 @@ from bs4 import BeautifulSoup
 
 def profile_of_company(ticker, profile_soup=None):
     """
-    Returns a BeautifulSoup object and a dictionary with keys: 
+    Return a BeautifulSoup object and a dictionary with keys: 
     Company Name, Sector, Industry, Number of employees.
+
+    Arguments:  
+    ticker - ticker of company  
+    profile_soup - provide soup if you already have one
     """
 
     if profile_soup is None:
@@ -25,7 +29,7 @@ def profile_of_company(ticker, profile_soup=None):
 
 def statistics_of_company(ticker, statistics_soup=None):
     """
-    Returns a BeautifulSoup object and a dictionary with keys: 
+    Return a BeautifulSoup object and a dictionary with keys: 
     Market Cap ($ millions), 52 Week Price Change In %, 
     Average Trading Volume Last 3 Months (thousands).
     """
@@ -44,7 +48,7 @@ def statistics_of_company(ticker, statistics_soup=None):
 
 def _profile_soup_of_company(ticker):
     """
-    Returns a BeautifulSoup object, which represents the HTMl node
+    Return a BeautifulSoup object, which represents the HTMl node
     that contains Profile info associated with ticker.
     """
 
@@ -58,7 +62,7 @@ def _profile_soup_of_company(ticker):
 
 def _statistics_soup_of_company(ticker):
     """
-    Returns a BeautifulSoup object, which represents the HTMl node
+    Return a BeautifulSoup object, which represents the HTMl node
     that contains Statistics info associated with ticker.
     """
 
@@ -73,7 +77,7 @@ def _statistics_soup_of_company(ticker):
 
 def _response_soup_of_url(url):
     """
-    Sends a GET request to url, then returns a BeautifulSoup object
+    Send a GET request to url, then returns a BeautifulSoup object
     which represents the response body coresponding to the request.
     """
 
@@ -86,7 +90,7 @@ def _response_soup_of_url(url):
 
 def _value_of_key(soup, key):
     """
-    Returns value coresponding to key from HTML table.
+    Return value coresponding to key from HTML table.
     """
 
     return soup.find(string=key)[0].parent.parent.next_sibling.string

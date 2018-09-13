@@ -1,10 +1,3 @@
-"""YFTool is short for Yahoo Finance
-Tool. Use YFTool to fetch Profile and
-statistics information of a company
-according to its ticker.
-"""
-
-
 """
 
 Abstract

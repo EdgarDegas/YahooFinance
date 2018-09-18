@@ -1,5 +1,5 @@
 import requests
-from . import parser
+from . import _parser
 
 from enum import Enum
 
@@ -15,7 +15,7 @@ def get_profile_of(ticker):
 
     # send request, convert response to Soup object
     doc = _html_doc_from_URL(profile_url)
-    return parser.parse_profile(doc)
+    return _parser.parse_profile(doc)
 
 
 def get_statistics_of(ticker):
@@ -25,7 +25,7 @@ def get_statistics_of(ticker):
 
     # send request, convert response to Soup object
     doc = _html_doc_from_URL(statistics_URL)
-    return parser.parse_statistics(doc)
+    return _parser.parse_statistics(doc)
 
 
 

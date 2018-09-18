@@ -10,4 +10,4 @@ some_company.get_statistics()
 
 """
 
-from .companies import Company
+from ._companies import Company

@@ -3,11 +3,8 @@
 How to Use:
 
 import YFTool as yf  
-some_company = yf.Company('CEA')  
-
-some_company.get_profile()  
-some_company.get_statistics()
+yf.handle_csv(csv_file_path)
 
 """
 
-from ._companies import Company
+from ._csv_tool import handle_csv

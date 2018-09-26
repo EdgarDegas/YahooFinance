@@ -1,6 +1,9 @@
 import YFTool as yf
 
 # ticker of company to inspect
-ticker = input('Enter ticker of company:')
+csv_file_path = input('Enter path of the CSV file path:')
 
-yf.Company(ticker)
+try:
+    yf.handle_csv(csv_file_path)
+except OSError:
+    print('File not found!')

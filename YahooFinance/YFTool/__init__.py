@@ -1,24 +1,10 @@
-"""
+"""YFTool is a tool to fetch information about a company according to its ticker.  
 
-Abstract
+How to Use:
 
-YF stands for Yahoo Finance.  
-YFTool is used to get a company's profile and statistics information from https://finance.yahoo.com.
-
----
-
-
-How to use
-
-```
-import YFTool as yf
-
-company = yf.Company(ticker=)
-
-company.get_profile()
-company.get_statistics()
-```
+import YFTool as yf  
+yf.handle_csv(csv_file_path)
 
 """
 
-from ._Companies import Company
+from ._csv_tool import handle_csv
